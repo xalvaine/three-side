@@ -1,3 +1,9 @@
+import Logo from '../../assets/logo.svg'
+
 export const Home = () => {
-  return <>asdasasdadsdasd</>
+  return (
+    <header>
+      <Logo />
+    </header>
+  )
 }
