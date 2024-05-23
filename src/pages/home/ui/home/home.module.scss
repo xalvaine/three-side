@@ -1,0 +1,30 @@
+.content {
+  overflow: hidden;
+}
+
+.container {
+  padding: 0 40px;
+}
+
+.title {
+  margin-top: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(120% + 6px);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(6, 210, 231, 1);
+    width: 100px;
+    height: 100px;
+    filter: blur(50px);
+    left: calc(100% - 40px);
+    bottom: -50px;
+  }
+}
+
+.titleButton {
+  margin-top: 40px;
+}

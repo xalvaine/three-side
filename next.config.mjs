@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  assetPrefix: '.',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '.' : undefined,
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
