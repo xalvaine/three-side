@@ -1,5 +1,6 @@
 import { Button } from '../button/button'
 import { Tasks } from '../tasks/tasks'
+import { Pipeline } from '../pipeline/pipeline'
 
 import styles from './home.module.scss'
 
@@ -15,6 +16,14 @@ export const Home = () => {
         <p className={styles.text}>Посмотрите, как мы работаем над проектом</p>
         <Button className={styles.titleButton}>Смотреть пример</Button>
         <Tasks />
+        <p style={{ marginTop: 24 }}>
+          Если нужна другая услуга или вы сомневаетесь в выборе, пишите — мы
+          поможем разобраться
+        </p>
+        <Button block className={styles.titleButton} style={{ marginTop: 24 }}>
+          Оставить заявку на консультацию
+        </Button>
+        <Pipeline />
       </div>
     </div>
   )

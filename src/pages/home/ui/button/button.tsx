@@ -1,15 +1,26 @@
-import { ReactNode } from 'react'
+import { HTMLAttributes, ReactNode } from 'react'
 import classNames from 'classnames'
 
 import styles from './button.module.scss'
 
-interface ButtonProps {
+type ButtonProps = HTMLAttributes<HTMLButtonElement> & {
+  block?: boolean
   children: ReactNode
   className?: string
 }
 
-export const Button = ({ children, className }: ButtonProps) => {
+export const Button = ({
+  children,
+  className,
+  block,
+  ...rest
+}: ButtonProps) => {
   return (
-    <button className={classNames(styles.button, className)}>{children}</button>
+    <button
+      className={classNames(styles.button, block && styles.block, className)}
+      {...rest}
+    >
+      {children}
+    </button>
   )
 }
