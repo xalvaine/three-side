@@ -114,12 +114,7 @@ export const Tasks = () => {
         кибербезопасности
       </Title>
       <div className={styles.wrapper}>
-        <Swiper
-          loop
-          slidesPerView={1}
-          spaceBetween={24}
-          className={styles.slider}
-        >
+        <Swiper slidesPerView={1} spaceBetween={24} className={styles.slider}>
           {tasks.map(({ title, text }) => (
             <SwiperSlide key={title}>
               <Task title={title} text={text} />
