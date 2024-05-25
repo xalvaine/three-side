@@ -1,4 +1,4 @@
-import { Title } from '../title/title'
+import { Title } from 'shared/ui'
 
 import styles from './pipeline.module.scss'
 import classNames from 'classnames'

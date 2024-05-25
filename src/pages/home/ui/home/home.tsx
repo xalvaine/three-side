@@ -1,6 +1,6 @@
-import { Button } from '../button/button'
-import { Tasks } from '../tasks/tasks'
-import { Pipeline } from '../pipeline/pipeline'
+import { Button } from 'shared/ui'
+import { Tasks } from 'widgets/tasks/ui'
+import { Pipeline } from 'widgets/pipeline/ui'
 
 import styles from './home.module.scss'
 

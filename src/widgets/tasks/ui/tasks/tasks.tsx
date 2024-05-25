@@ -3,7 +3,7 @@ import 'swiper/css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { ReactNode } from 'react'
 
-import { Title } from '../title/title'
+import { Title } from 'shared/ui'
 
 import styles from './tasks.module.scss'
 
