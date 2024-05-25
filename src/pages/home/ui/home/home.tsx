@@ -3,6 +3,7 @@ import { Tasks } from 'widgets/tasks/ui'
 import { Pipeline } from 'widgets/pipeline/ui'
 import { Guarantee } from 'widgets/guarantee/ui'
 import { Partners } from 'widgets/partners/ui'
+import { Contact } from 'widgets/contact/ui'
 
 import styles from './home.module.scss'
 
@@ -28,6 +29,7 @@ export const Home = () => {
         <Pipeline />
         <Guarantee />
         <Partners />
+        <Contact />
       </div>
     </div>
   )
