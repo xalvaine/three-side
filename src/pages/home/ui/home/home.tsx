@@ -1,6 +1,7 @@
 import { Button } from 'shared/ui'
 import { Tasks } from 'widgets/tasks/ui'
 import { Pipeline } from 'widgets/pipeline/ui'
+import { Guarantee } from 'widgets/guarantee/ui'
 
 import styles from './home.module.scss'
 
@@ -24,6 +25,7 @@ export const Home = () => {
           Оставить заявку на консультацию
         </Button>
         <Pipeline />
+        <Guarantee />
       </div>
     </div>
   )
