@@ -43,3 +43,43 @@
   color: white;
   transition: color 0.3s;
 }
+
+@media (min-width: 1024px) {
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 64px;
+    margin-top: 130px;
+    padding: 0;
+  }
+
+  .step {
+    &::before {
+      width: 20px;
+      height: 20px;
+      right: unset;
+      left: 0;
+      top: unset;
+      bottom: calc(100% + 40px);
+    }
+
+    &:not(:last-of-type)::after {
+      height: 1px;
+      width: calc(100% + 32px);
+      background-color: rgba(217, 217, 217, 1);
+      right: unset;
+      left: 26px;
+      top: unset;
+      bottom: calc(100% + 49.5px);
+      transition: background-color 0.3s;
+    }
+  }
+
+  .stepTitle {
+    font-size: 18px;
+  }
+
+  .stepText {
+    font-size: 14px;
+  }
+}

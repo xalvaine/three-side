@@ -19,13 +19,19 @@ export const Home = () => {
         <p className={styles.text}>Посмотрите, как мы работаем над проектом</p>
         <Button className={styles.titleButton}>Смотреть пример</Button>
         <Tasks />
-        <p style={{ marginTop: 24 }}>
-          Если нужна другая услуга или вы сомневаетесь в выборе, пишите — мы
-          поможем разобраться
-        </p>
-        <Button block className={styles.titleButton} style={{ marginTop: 24 }}>
-          Оставить заявку на консультацию
-        </Button>
+        <div className={styles.questions}>
+          <p style={{ marginTop: 24 }}>
+            Если нужна другая услуга или вы сомневаетесь в выборе, пишите — мы
+            поможем разобраться
+          </p>
+          <Button
+            block
+            className={styles.titleButton}
+            style={{ marginTop: 24 }}
+          >
+            Оставить заявку на консультацию
+          </Button>
+        </div>
         <Pipeline />
         <Guarantee />
         <Partners />

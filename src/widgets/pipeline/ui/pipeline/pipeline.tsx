@@ -46,24 +46,26 @@ export const Pipeline = () => {
       <Title>
         Выстроим прозрачный процесс, чтобы вы быстрее получали результаты
       </Title>
-      <ul className={styles.steps}>
-        {steps.map(({ title, text }, index) => (
-          <li
-            key={title}
-            className={classNames(
-              styles.step,
-              index === activeIndex && styles.stepActive,
-            )}
-            onClick={() => setActiveIndex(index)}
-          >
-            <p className={styles.stepOrder}>{index + 1}</p>
-            <h3 className={styles.stepTitle}>{title}</h3>
-            <p className={styles.stepText}>{text}</p>
-          </li>
-        ))}
-      </ul>
-      <div className={styles.stepIllustrationWrapper}>
-        {steps[activeIndex].illustration}
+      <div className={styles.wrapper}>
+        <ul className={styles.steps}>
+          {steps.map(({ title, text }, index) => (
+            <li
+              key={title}
+              className={classNames(
+                styles.step,
+                index === activeIndex && styles.stepActive,
+              )}
+              onClick={() => setActiveIndex(index)}
+            >
+              <p className={styles.stepOrder}>{index + 1}</p>
+              <h3 className={styles.stepTitle}>{title}</h3>
+              <p className={styles.stepText}>{text}</p>
+            </li>
+          ))}
+        </ul>
+        <div className={styles.stepIllustrationWrapper}>
+          {steps[activeIndex].illustration}
+        </div>
       </div>
     </>
   )

@@ -12,11 +12,17 @@ export const Contact = () => {
         <Input label='e-mail' />
         <Input label='Имя и фамилия' />
         <Textarea rows={10} label='Вопрос или описание задачи' />
-        <Button>Оставить заявку на консультацию</Button>
+        <Button className={styles.button}>
+          Оставить заявку на консультацию
+        </Button>
       </form>
       <p className={styles.text}>
         Отправляя форму, вы подтверждаете согласие с 
-        <a className={styles.link} href='https://3side.org/docs/polite.pdf'>
+        <a
+          className={styles.link}
+          href='https://3side.org/docs/polite.pdf'
+          target='_blank'
+        >
           политикой конфиденциальности
         </a>
       </p>

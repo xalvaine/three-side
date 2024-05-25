@@ -1,9 +1,10 @@
 .sliderWrapper {
   margin: 0 -24px;
+  position: relative;
 }
 
 .slider {
-  padding: 24px;
+  padding: 0 24px;
 }
 
 .slide {
@@ -13,4 +14,55 @@
   height: 80px;
   align-items: center;
   justify-content: center;
+}
+
+.button {
+  display: none;
+}
+
+.buttonLeft {
+}
+
+.buttonRight {
+}
+
+@media (min-width: 1024px) {
+  .sliderWrapper {
+    margin: 0;
+  }
+
+  .slider {
+    padding: 0;
+  }
+
+  .slide {
+    height: 100px;
+  }
+
+  .button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: none;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+    stroke: #06d2e7;
+    transition: stroke 0.3s;
+    stroke-width: 3px;
+
+    &:disabled {
+      stroke: rgba(217, 217, 217, 0);
+    }
+  }
+
+  .buttonLeft {
+    right: calc(100%);
+  }
+
+  .buttonRight {
+    left: calc(100%);
+  }
 }

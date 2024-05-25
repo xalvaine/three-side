@@ -6,6 +6,7 @@ import { ReactNode } from 'react'
 import { Title } from 'shared/ui'
 
 import styles from './tasks.module.scss'
+import { useIsDesktop } from 'shared/lib'
 
 const tasks: TaskProps[] = [
   {
@@ -107,6 +108,8 @@ const Task = ({ title, text }: TaskProps) => {
 }
 
 export const Tasks = () => {
+  const { isDesktop, isWindow } = useIsDesktop()
+
   return (
     <>
       <Title className={styles.title}>
@@ -114,13 +117,19 @@ export const Tasks = () => {
         кибербезопасности
       </Title>
       <div className={styles.wrapper}>
-        <Swiper slidesPerView={1} spaceBetween={24} className={styles.slider}>
-          {tasks.map(({ title, text }) => (
-            <SwiperSlide key={title}>
-              <Task title={title} text={text} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        {isDesktop || !isWindow ? (
+          tasks.map(({ title, text }) => (
+            <Task key={title} title={title} text={text} />
+          ))
+        ) : (
+          <Swiper slidesPerView={1} spaceBetween={24} className={styles.slider}>
+            {tasks.map(({ title, text }) => (
+              <SwiperSlide key={title}>
+                <Task title={title} text={text} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
       </div>
     </>
   )

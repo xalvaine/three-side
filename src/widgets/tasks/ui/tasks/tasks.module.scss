@@ -35,5 +35,25 @@
 }
 
 .slider {
-  padding: 24px;
+  padding: 0 24px;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+
+    &::after {
+      width: 285px;
+      height: 285px;
+      filter: blur(150px);
+      top: 0;
+      margin: auto;
+      bottom: 0;
+      right: unset;
+      left: -200px;
+    }
+  }
 }
