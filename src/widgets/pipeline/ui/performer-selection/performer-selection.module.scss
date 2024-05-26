@@ -1,29 +1,29 @@
 .wrapper {
-  display: grid;
-  grid-template-columns: auto minmax(50%, 100%);
-  grid-template-areas:
-    '. image'
-    '. image'
-    '. image';
-  align-items: center;
+  display: flex;
   grid-gap: 8px 0;
 }
 
 .image {
-  grid-area: image;
-  min-height: 80%;
-  justify-self: end;
+  align-self: center;
+  min-width: 150px;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-between;
 }
 
 .text {
   font-size: 12px;
 
   &:first-of-type {
-    align-self: start;
+    justify-self: start;
   }
 
   &:last-of-type {
-    align-self: end;
+    justify-self: end;
   }
 }
 
