@@ -5,7 +5,9 @@ import styles from './contact.module.scss'
 export const Contact = () => {
   return (
     <>
-      <Title>Напишите нам, чтобы обсудить вашу задачу</Title>
+      <Title className={styles.title}>
+        Напишите нам, чтобы обсудить вашу задачу
+      </Title>
       <form className={styles.form}>
         <Input label='Имя и фамилия' />
         <Input label='Телефон' />

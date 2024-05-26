@@ -1,5 +1,17 @@
 .steps {
+  position: relative;
   padding-left: 48px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(6, 210, 231, 1);
+    width: 100px;
+    height: 100px;
+    filter: blur(50px);
+    right: -50px;
+    top: 100px;
+  }
 }
 
 .step {
@@ -74,9 +86,21 @@
 }
 
 .stepIllustrationWrapper {
+  position: relative;
   padding: 24px;
   border: 2px solid rgba(6, 210, 231, 1);
   border-radius: 8px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(6, 210, 231, 1);
+    width: 100px;
+    height: 100px;
+    filter: blur(50px);
+    left: -50px;
+    bottom: -50px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -84,6 +108,17 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 64px;
+  }
+
+  .steps {
+    &::after {
+      width: 285px;
+      height: 285px;
+      filter: blur(150px);
+      left: -200px;
+      top: unset;
+      bottom: -150px;
+    }
   }
 
   .stepIllustrationWrapper {
@@ -101,6 +136,10 @@
     > * {
       flex-shrink: 0;
       margin: auto;
+    }
+
+    &::after {
+      content: none;
     }
   }
 }
