@@ -6,10 +6,11 @@ import { Title } from 'shared/ui'
 import { useIsDesktop } from 'shared/lib'
 
 import Siberus from '../../assets/siberus.svg'
-import ASI from '../../assets/asi.png'
-import SecureT from '../../assets/secure-t.png'
-import OZZ from '../../assets/ozz.png'
-import CodeIB from '../../assets/code-ib.png'
+import ASI from '../../assets/asi.svg'
+import SecureT from '../../assets/secure-t.svg'
+import OZZ from '../../assets/ozz.svg'
+import CodeIB from '../../assets/code-ib.svg'
+import StartX from '../../assets/startx.svg'
 import Cyberhome from '../../assets/cyberhome.svg'
 import ChevronLeft from '../../assets/chevron-left.svg'
 import ChevronRight from '../../assets/chevron-right.svg'
@@ -18,12 +19,13 @@ import styles from './partners.module.scss'
 import classNames from 'classnames'
 
 const partners: { icon: ReactNode }[] = [
-  { icon: <Siberus /> },
-  { icon: <img src={ASI.src} alt='ASI' /> },
-  { icon: <img src={SecureT.src} alt='Secure T' /> },
-  { icon: <img src={OZZ.src} alt='OZZ' /> },
-  { icon: <img src={CodeIB.src} alt='CodeIB' /> },
-  { icon: <Cyberhome /> },
+  { icon: <Siberus height='30%' /> },
+  { icon: <ASI height='50%' /> },
+  { icon: <SecureT height='40%' /> },
+  { icon: <OZZ height='30%' /> },
+  { icon: <CodeIB height='35%' /> },
+  { icon: <StartX height='25%' /> },
+  { icon: <Cyberhome height='30%' /> },
 ]
 
 export const Partners = () => {
