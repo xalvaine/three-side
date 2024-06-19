@@ -11,7 +11,9 @@
 }
 
 .taskTitle {
-  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .taskText {
@@ -55,5 +57,9 @@
       right: unset;
       left: -200px;
     }
+  }
+
+  .taskTitle {
+    font-size: 26px;
   }
 }
