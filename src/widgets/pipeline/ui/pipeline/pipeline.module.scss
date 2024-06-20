@@ -5,6 +5,7 @@
   &::after {
     content: '';
     position: absolute;
+    z-index: -1;
     background-color: rgba(6, 210, 231, 1);
     width: 100px;
     height: 100px;
@@ -94,6 +95,7 @@
   &::after {
     content: '';
     position: absolute;
+    z-index: -1;
     background-color: rgba(6, 210, 231, 1);
     width: 100px;
     height: 100px;

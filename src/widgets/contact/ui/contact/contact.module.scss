@@ -4,6 +4,7 @@
   &::after {
     content: '';
     position: absolute;
+    z-index: -1;
     background-color: rgba(58, 123, 219, 1);
     width: 100px;
     height: 100px;
